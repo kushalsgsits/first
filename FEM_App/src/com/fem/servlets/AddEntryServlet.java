@@ -48,7 +48,7 @@ public class AddEntryServlet extends HttpServlet
 	 */
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException
 	{
-		boolean entryAdded = false;;
+		boolean entryAdded = false;
 		JSONObject requestJSONObj = null;
 		for (int i = 0; i < 3; i++)
 		{
