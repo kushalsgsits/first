@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.fem.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/fem_app/greet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+		<servlet-name>CreateGroupServlet</servlet-name>
+		<servlet-class>com.fem.servlets.CreateGroupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateGroupServlet</servlet-name>
+		<url-pattern>/creategroup</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateGroupServlet</servlet-name>
+		<servlet-class>com.fem.servlets.UpdateGroupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateGroupServlet</servlet-name>
+		<url-pattern>/updategroup</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LeaveGroupServlet</servlet-name>
+		<servlet-class>com.fem.servlets.LeaveGroupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LeaveGroupServlet</servlet-name>
+		<url-pattern>/leavegroup</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddEntryServlet</servlet-name>
+		<servlet-class>com.fem.servlets.AddEntryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddEntryServlet</servlet-name>
+		<url-pattern>/addentry</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteEntryServlet</servlet-name>
+		<servlet-class>com.fem.servlets.DeleteEntryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteEntryServlet</servlet-name>
+		<url-pattern>/deleteentry</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>HistoryServlet</servlet-name>
+		<servlet-class>com.fem.servlets.HistoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HistoryServlet</servlet-name>
+		<url-pattern>/history</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DashBoardServlet</servlet-name>
+		<servlet-class>com.fem.servlets.DashBoardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DashBoardServlet</servlet-name>
+		<url-pattern>/dashboard</url-pattern>
+	</servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>FEM_App.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

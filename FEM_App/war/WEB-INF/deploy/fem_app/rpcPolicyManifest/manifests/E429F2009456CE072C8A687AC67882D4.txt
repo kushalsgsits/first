@@ -1,0 +1,2 @@
+serviceClass: com.fem.client.GreetingService
+path: DC8513D11271E500F1EE9DECD1574AE6.gwt.rpc

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+
+    <persistence-unit name="transactions-optional">
+        <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+        <properties>
+            <property name="datanucleus.NontransactionalRead" value="true"/>
+            <property name="datanucleus.NontransactionalWrite" value="true"/>
+            <property name="datanucleus.ConnectionURL" value="appengine"/>
+        </properties>
+    </persistence-unit>
+    
+    <persistence-unit name="fem">
+        <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+        <class>com.fem.entities.Group</class>
+        <class>com.fem.entities.Member</class>
+        <class>com.fem.entities.Entry</class>
+        <properties>
+            <property name="datanucleus.NontransactionalRead" value="true"/>
+            <property name="datanucleus.NontransactionalWrite" value="true"/>
+            <property name="datanucleus.ConnectionURL" value="appengine"/>
+            <property name="datanucleus.appengine.datastoreEnableXGTransactions" value="true"/>
+            <property name="datanucleus.singletonEMFForName" value="true"/>
+            <property name="datanucleus.appengine.datastoreReadConsistency" value="STRONG"/>
+        </properties>
+    </persistence-unit>
+    
+</persistence>
