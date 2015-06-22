@@ -214,7 +214,7 @@ public class AddEntryServlet extends HttpServlet
 	 */
 	private String getResponseJSON(boolean entryAdded)
 	{
-		int requestStatus = entryAdded ? 1 : 0;
+		int requestStatus = entryAdded ? 1 : 0;;
 		String responseMessage = entryAdded ? ResponseMessage.ENTRY_ADDED
 				: ResponseMessage.ENTRY_NOT_ADDED;
 
